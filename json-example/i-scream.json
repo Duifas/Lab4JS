@@ -1,0 +1,41 @@
+//JSON Document
+{
+	"companyName": "I Scream Inc",
+	"headOffice" : "South Pole, Antartica",
+	"established": 2001,
+	"topFlavors" : [
+					{
+						"name":"Monstrous Mint",
+						"calories":450,
+						"type": "ice cream",
+						"ingredients":[
+									  "Peppermint",
+									  "Chocolate Chips",
+									  "Vanilla"
+									  ],
+						"image":"chocolate-mint.svg"
+					},
+					{
+						"name":"Perfect Peach Mango",
+						"calories":589,
+						"type": "ice cream",
+						"ingredients":[
+									  "Peaches",
+									  "Mango Chunks",
+									  "Honey"
+									  ],
+						"image":"peach-mango.svg"
+					},
+					{
+						"name":"Super Strawberry",
+						"calories":345,
+						"type": "ice cream",
+						"ingredients":[
+									  "Wild Strawberries",
+									  "Vanilla",
+									  "Honey"
+									  ],
+						"image":"strawberry-sprinkle.svg"
+					}
+				]
+}
