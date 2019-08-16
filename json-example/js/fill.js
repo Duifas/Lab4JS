@@ -6,7 +6,7 @@ let header = document.querySelector('header');
 let section = document.querySelector('section');
 
 //Step Three - Store the URL of a JSON file in a variable 
-let requestURL = "https://raw.githubusercontent.com/Duifas/Lab4JS/master/json-example/i-scream.json";
+let requestURL = "https://raw.githubusercontent.com/Duifas/Lab4JS/master/json-example/json/i-scream.json";
 
 //Step Four - Create a new XHR object 
 
@@ -78,6 +78,7 @@ function topFlavours(jsonObj) {
 
 		//Append each item to the section element
 		article.appendChild(h2);
+		article.appendChild(img);
 		article.appendChild(p1);
 		article.appendChild(p2);
 		section.appendChild(article);
