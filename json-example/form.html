@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Validation</title>
+	<script src="js/main.js" async></script>
+</head>
+<body>
+	<main>
+		<form action="" method="post">
+			<fieldset style="display: inline-block;">
+				<label for="nameField">Name:</label>
+				<input type="text" name="Name" id="nameField" class="form-control" minlength="3" maxlength="40" required><br>
+				<label for="emailField">Email:</label>
+				<input type="email" name="Email" id="emailField" class="form-control" required><br>
+				<label for="ageField">Age:</label>
+				<input type="number" name="Age" id="ageField" class="form-control" min="1" max="120" required><br>
+				<label for="locationField">Location:</label>
+				<input type="text" name="Location" id="locationField" class="form-control" required><br>
+				<input type="submit" value="Submit Information!" name="submit" >
+			</fieldset>
+		</form>
+	</main>
+
+</body>
+</html>

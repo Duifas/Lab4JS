@@ -6,7 +6,7 @@ let header = document.querySelector('header');
 let section = document.querySelector('section');
 
 //Step Three - Store the URL of a JSON file in a variable 
-let requestURL = "https://week4comp1006.azurewebsites.net/json-example/i-scream.json";
+let requestURL = "https://raw.githubusercontent.com/Duifas/Lab4JS/master/json-example/i-scream.json";
 
 //Step Four - Create a new XHR object 
 
@@ -28,6 +28,7 @@ request.send();
 
 request.onload = function() {
 	var iScreamInc = request.response;
+	console.log(iScreamInc);
 	populateHeader(iScreamInc);
 	topFlavours(iScreamInc);
 }
@@ -42,6 +43,7 @@ function populateHeader(jsonObj) {
 	//add the company info
 	var headerPara = document.createElement('p');
 	headerPara.textContent = 'Head Office ' + jsonObj['headOffice'] + ', Established ' + jsonObj['established'];
+	header.appendChild(headerPara);
 }
 
 //Step 10 - Creating the topFlavours function
@@ -50,42 +52,34 @@ function topFlavours(jsonObj) {
 
 	//bind the JSON obj topFlavours to a variable
 
-	let topFlavours = jsonObj['topFlavours'];
+	let products = jsonObj['products'];
 
 	//loop through the top flavours object
 
-	for(let i = 0; i < topFlavours.length; i++) {
+	for(let i = 0; i < products.length; i++) {
 		var article = document.createElement('article');
 		var h2 = document.createElement('h2');
-		var img = document.createElement('img');
 		var p1 = document.createElement('p');
 		var p2 = document.createElement('p');
-		var list = document.createElement('ul');
+		var img = document.createElement('img');
+
 
 		//set the text content
+		img.setAttribute('src', 'https://github.com/Duifas/Lab4JS/blob/master/json-example/images/' + products[i].image);
+		img.setAttribute('alt', products[i].name);
 
-		img.setAttribute('src', 'http://aws/computerstudi.es/~gc900182471/json/images/' + topFlavours[i].image);
-		img.setAttribute('alt', topFlavours[i].name);
+
 		h2.textContent = topFlavours[i].name;
+		h2.textContent = products[i].name;
 		//assign p1 - calories
-		p1.textContent = topFlavours[i].calories;
+		p1.textContent = products[i].price;
 		//p2 - type
-		p2.textContent = topFlavours[i].type;
-		//ul = list ingredients
-		let ingredients = topFlavours[i].ingredients;
-		//build a loop to loop through the ingredient list
-		for(var j = 0; j < ingredients.length; j++){
-			let listItem = document.createElement('li');
-			listItem.textContent = ingredients[j];
-			list.appendChild(listItem);
-		}
+		p2.textContent = products[i].description;
 
 		//Append each item to the section element
-		article.appendChild(img);
 		article.appendChild(h2);
 		article.appendChild(p1);
 		article.appendChild(p2);
-		article.appendChild(list);
 		section.appendChild(article);
 	}
 }
