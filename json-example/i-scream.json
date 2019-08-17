@@ -7,17 +7,32 @@
       "name": "Danny Devito Cutout",
       "price": "$74.97",
       "description": "For those who think there’s nothing more comforting than having the star of It’s Always Sunny in Philadelphia and One Flew Over the Cuckoo’s Nest watch over you, this Danny DeVito cutout should come in handy.",
+      "features":[
+        "Always have a friend!",
+        "Brag about it to your friends!",
+        "Give your room an unique look!"
+      ],
       "image": "danny-devito-cutout.jpg"
     },
     {
       "name": "Roast Beef Bath Soak",
       "price": "$17.95",
       "description": "The only thing more relaxing than a warm bath is a warm bath full of au jus.",
+      "features":[
+        "Do you love the smell of roast beef? Boy, do I have a solution.",
+        "Relax in your bath as you were in the dinning table!",
+        "Stay tuned for the Gravy Shampoo being developed!"
+      ],
       "image": "roast-beef-bath-soak.jpg"
     },{
       "name": "Turkey Hat",
       "price": "$12.99",
       "description": "While most people don’t typically dress up for Thanksgiving, this charming turkey hat seems worth making an exception for.",
+      "features":[
+        "Instant awesome costume as Thanksgiving Dinner!",
+        "Stylish hat around!",
+        "Be careful with the stuffing!"
+      ],
       "image": "turkey-hat.jpeg"
     }
   ]
